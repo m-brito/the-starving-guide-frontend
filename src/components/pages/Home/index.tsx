@@ -7,7 +7,7 @@ import { Container } from "./styles";
 export const Home: React.FC = () => {
   return (
     <Container>
-      <p>Home</p>
+      <p>Ola</p>
     </Container>
   );
 };
