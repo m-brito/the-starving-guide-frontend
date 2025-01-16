@@ -29,13 +29,16 @@ export interface Props extends PropsWithChildren {
 
   color?: string | string[]
   fontSize?: string | string[]
-  $lineHeight?: string | string[]
   $marginTop?: string | string[]
-  $marginBottom?: string | string[]
+  fontFamily?: string | string[]
   $marginLeft?: string | string[]
+  $lineHeight?: string | string[]
   $marginRight?: string | string[]
+  $marginBottom?: string | string[]
+  $letterSpacing?: string | string[]
+  $textTransform?: string | string[]
   fontWeight?: keyof FontWeights | (keyof FontWeights)[]
-  isLoading?: boolean
 
+  isLoading?: boolean
   as?: string | React.ComponentType<any>
 }

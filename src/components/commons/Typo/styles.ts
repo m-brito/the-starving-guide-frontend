@@ -1,22 +1,25 @@
 import styled, { css } from 'styled-components'
-import { normalizeEntry } from './utils/normalizeEntry'
-import { normalizeWeight } from './utils/normalizeWeight'
 import { mq } from '@services/facepaint'
 import { FontWeights } from './utils/default'
+import { normalizeEntry } from '@utils/normalize'
+import { normalizeWeight } from './utils/normalizeWeight'
 
 type ContainerProps = {
   $align: 'center' | 'left' | 'right'
+
+  color: string | string[]
   fontSize: string | string[]
-  $lineHeight: string | string[]
+  fontFamily: string | string[]
   $marginTop: string | string[]
+  $lineHeight: string | string[]
   $marginLeft: string | string[]
   $marginRight: string | string[]
   $marginBottom: string | string[]
+  $textTransform: string | string[]
   fontWeight: keyof FontWeights | (keyof FontWeights)[]
-  color: string | string[]
 
   $isLoading: boolean
-  fontFamily: string
+  $letterSpacing: string | string[]
 } & HTMLParagraphElement
 
 const SKELETON_GRADIENT = 'linear-gradient(-45deg, #ECECEC, #FAFAFA)'
@@ -44,16 +47,18 @@ const skeleton = css<ContainerProps>`
 
 export const Container = styled.div<ContainerProps>`
   ${({
+    color,
     $align,
     fontSize,
-    $lineHeight,
-    color,
-    $marginTop,
-    $marginBottom,
-    $marginLeft,
-    $marginRight,
+    fontWeight,
     fontFamily,
-    fontWeight
+    $marginTop,
+    $marginLeft,
+    $lineHeight,
+    $marginRight,
+    $marginBottom,
+    $textTransform,
+    $letterSpacing
   }) =>
     mq({
       textAlign: normalizeEntry($align),
@@ -65,7 +70,9 @@ export const Container = styled.div<ContainerProps>`
       marginLeft: normalizeEntry($marginLeft),
       marginRight: normalizeEntry($marginRight),
       fontFamily: normalizeEntry(fontFamily),
-      fontWeight: normalizeWeight(fontWeight)
+      fontWeight: normalizeWeight(fontWeight),
+      letterSpacing: normalizeEntry($letterSpacing),
+      textTransform: normalizeEntry($textTransform)
     })}
 
   ${({ $isLoading }) => ($isLoading ? skeleton : {})}
