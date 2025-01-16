@@ -1,12 +1,12 @@
 import { ColorsWildcards } from 'styled-components'
 
 export const LIGHT_THEME_COLORS: ColorsWildcards = {
-  background: '#FFFFFF',
-  primary: '#0062d5',
+  background: '#D9CBA7',
+  primary: '#2e1a17',
   secondary: '#e1e1e1',
   text: {
-    primary: '#2C2C2C',
-    secondary: '#2C2C2C'
+    primary: '#040404',
+    secondary: '#414141'
   },
   borders: {
     gray: '#E0E0E0'
@@ -17,12 +17,12 @@ export const LIGHT_THEME_COLORS: ColorsWildcards = {
 }
 
 export const DARK_THEME_COLORS: ColorsWildcards = {
-  background: '#000000',
-  primary: '#0062d5',
+  background: '#D9CBA7',
+  primary: '#2e1a17',
   secondary: '#2C2C2C',
   text: {
-    primary: '#FFFFFF',
-    secondary: '#FFFFFF'
+    primary: '#040404',
+    secondary: '#414141'
   },
   borders: {
     gray: '#747474'

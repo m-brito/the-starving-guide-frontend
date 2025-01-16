@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     width: 100%;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: "Amatic SC", serif;
     -webkit-font-smoothing: antialiased;
   }
 
