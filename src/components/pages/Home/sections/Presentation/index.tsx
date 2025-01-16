@@ -3,10 +3,10 @@ import React from 'react'
 
 // Components
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
 // Styles
 import { Container, Content, Image } from './styles'
-import { Footer } from './components/Footer'
 
 export const Presentation: React.FC = () => {
   return (

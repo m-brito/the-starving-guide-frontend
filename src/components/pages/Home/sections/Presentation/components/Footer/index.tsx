@@ -1,12 +1,12 @@
 // External Libraries
 import React from 'react'
+import { useTheme } from 'styled-components'
 
 // Components
 import { Typo } from '@components/Typo'
 
 // Styles
 import { Container } from './styles'
-import { useTheme } from 'styled-components'
 
 export const Footer: React.FC = () => {
   const { colors } = useTheme()
