@@ -3,12 +3,12 @@ import React from 'react'
 
 // Styles
 import {
-  Container,
-  ImageContainer,
   Image,
-  TextContainer,
   Title,
-  Description
+  Container,
+  Description,
+  TextContainer,
+  ImageContainer
 } from './styles'
 
 export const TextHome = () => {
